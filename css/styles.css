@@ -1,0 +1,203 @@
+body {
+    background-color: #000;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #fff;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.header__inner {
+    padding: 48px 0;
+}
+
+.table__wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    /* Только тень вместо границы */
+    border: 2px solid #282828;
+
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    height: 112px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    color: #bdbdbd;
+}
+
+.table td {
+    border: 2px solid #282828;
+    text-align: center;
+    vertical-align: center;
+}
+
+.table tr:first-child td {
+    border-top: none;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table td:first-child {
+    border-left: none;
+}
+
+.table td:last-child {
+    border-right: none;
+}
+
+.col-1 {
+    width: 15%;
+    border-bottom: none !important;
+}
+
+.col-2 {
+    width: 67px;
+}
+
+.col-3 {
+    width: 18%;
+    text-align: center;
+    vertical-align: center;
+}
+
+.mergecol {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.subcol {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subcol:first-child {
+    border-right: 2px solid #282828;
+}
+
+.menu {
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-size: 14px;
+}
+
+.header__btn--wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__burger {
+    width: 72px;
+    height: 15px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.header__burger span {
+    width: 100%;
+    height: 1px;
+    background-color: #bdbdbd;
+}
+
+.hero {
+    margin-top: 16px;
+}
+
+.hero_inner {
+}
+
+.hero__title {
+    font-size: 140px;
+    text-align: center;
+}
+
+.hero__bg {
+    padding-top: 72px;
+    padding-bottom: 40px;
+    position: relative;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #050a14;
+}
+
+.hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero__bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #050a14;
+
+    /* параметры */
+    --hole: 110px;
+    --gap: 20px;
+    --step: calc(var(--hole) + var(--gap));
+
+    /* МАСКА */
+    -webkit-mask-image: repeating-linear-gradient(to right, transparent 0 var(--hole), #000 var(--hole) var(--step));
+
+    mask-image: repeating-linear-gradient(to right, transparent 0 var(--hole), #000 var(--hole) var(--step));
+
+    /* ВОТ ГЛАВНОЕ ИСПРАВЛЕНИЕ */
+    -webkit-mask-position: calc(var(--gap) / 2) 0;
+    mask-position: calc(var(--gap) / 2) 0;
+}
+
+.description {
+    padding: 120px 0;
+}
+
+.description__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description__text {
+    font-size: 34px;
+    font-weight: 600;
+    max-width: 780px;
+    line-height: 1.17;
+}
+
+.decription_corps {
+    max-width: 434px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+    justify-items: end;
+}
