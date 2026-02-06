@@ -1,3 +1,10 @@
 {
-  "liveServer.settings.port": 5501
+  "cssPropertySorter.sortOnSave": true,
+  "cssPropertySorter.order": "smacss", // или "concentric-css", "alphabetical"
+
+  // Можно комбинировать с встроенным форматтером
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  }
 }
